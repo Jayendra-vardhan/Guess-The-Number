@@ -44,6 +44,8 @@ document.querySelector('.check').addEventListener('click',function(){
         if(score>highscore){
             highscore = score;
             document.querySelector('.highscore').textContent=score;
+            document.querySelector('.message').textContent=`🎊Congratulations on achieving new HighScore🎊`;
+            
         }
     }
 
