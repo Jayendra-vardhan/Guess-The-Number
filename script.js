@@ -6,22 +6,25 @@
 // document.querySelector('.number').textContent=13;
 // document.querySelector('.score').textContent=20;
 
-const secretNumber = Math.trunc(Math.random()*20)+1;
-console.log(secretNumber);
+let secretNumber = Math.trunc(Math.random()*20)+1;
 let score = 10;
 let highscore = 0;
 
+document.querySelector('.number').addEventListener('click',function(){
+    document.querySelector('.message').textContent='Hey! don,t try to cheat';
+});
+
 document.querySelector('.again').addEventListener('click',function(){
-    score = 10;
+    document.querySelector('.number').textContent='?';
     secretNumber = Math.trunc(Math.random()*20)+1;
-    console.log(secretNumber);
     
+    score = 10;
     document.querySelector('.score').textContent=score;
+    document.querySelector('.guess').value='';
+        
     document.querySelector('body').style.backgroundColor='#222';
     document.querySelector('.number').style.width = '15rem';
-    document.querySelector('.message').textContent='Start guessing...';
-    document.querySelector('.number').textContent='?';
-    document.querySelector('.guess').value='';
+    document.querySelector('.message').textContent='Start guessing...';    
 });
 
 document.querySelector('.check').addEventListener('click',function(){
