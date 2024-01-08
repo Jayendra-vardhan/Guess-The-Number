@@ -10,6 +10,14 @@ const secretNumber = Math.trunc(Math.random()*20)+1;
 console.log(secretNumber);
 let score = 10;
 
+document.querySelector('.again').addEventListener('click',function(){
+    const secretNumber = Math.trunc(Math.random()*20)+1;
+    console.log(secretNumber);
+    score = 10;
+    document.querySelector('body').style.backgroundColor='#222';
+    document.querySelector('.number').style.width = '15rem';
+});
+
 document.querySelector('.check').addEventListener('click',function(){
     const guess = Number(document.querySelector('.guess').value);
     
