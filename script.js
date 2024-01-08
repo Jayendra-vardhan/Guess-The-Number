@@ -38,7 +38,7 @@ document.querySelector('.check').addEventListener('click',function(){
         document.querySelector('.number').textContent=secretNumber;
         document.querySelector('body').style.backgroundColor='#60b347';
         document.querySelector('.number').style.width = '30rem';
-        if(Score>highscore){
+        if(score>highscore){
             highscore = score;
             document.querySelector('.highscore').textContent=score;
         }
