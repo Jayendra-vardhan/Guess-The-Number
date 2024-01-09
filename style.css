@@ -82,17 +82,27 @@ h1 {
   left: 2rem;
 }
 
+.message {
+  font-size: 2rem;
+  width: 100%;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  top: 42%;
+}
+
 .guess {
   background: none;
   border: 4px solid #eee;
   font-family: inherit;
   color: inherit;
-  font-size: 5rem;
-  padding: 2.5rem;
+  font-size: 4rem;
+  padding: 2rem;
   width: 25rem;
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+  margin-top: 7rem;
 }
 
 .btn {
@@ -109,82 +119,28 @@ h1 {
   background-color: #ccc;
 }
 
-.message {
-  margin-bottom: 8rem;
-  height: 3rem;
-}
-
 .label-score {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 375px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-  
-  html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Press Start 2P', sans-serif;
-    color: #eee;
-    background-color: #222;
-    /* background-color: #60b347; */
-  }
-  
-  /* LAYOUT */
-  header {
-    position: relative;
-    height: ;
-    border-bottom: 7px solid #eee;
-  }
-  
-  main {
-    height: 65vh;
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .left {
-    width: 52rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 2rem;
-  }
-  
-  .right {
-    align-items: center;
-    width: 52rem;
-    font-size: 1rem;
-  }
-  
-  /* ELEMENTS STYLE */
+@media screen and (max-width: 426px) {
+     
   h1 {
     font-size: 2rem;
     text-align: center;
     position: absolute;
     width: 100%;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
   }
-
   .between {
     font-size: 1.2rem;
     text-align: center;
     position: absolute;
-    top: 70%;
-    Left: 0.5%;
+    width: 100%;
+    top:60%;
   }
-  
+
   .number {
     background: #eee;
     color: #333;
@@ -198,46 +154,48 @@ h1 {
     transform: translate(-50%, 50%);
   }
   
+  .btn {
+    border: none;
+    background-color: #eee;
+    color: #222;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 1.5rem;
+    cursor: pointer;
+  }
   .again {
     position: absolute;
     top: 2rem;
     left: 2rem;
   }
+
   
-  .guess {
-    background: none;
-    border: 4px solid #eee;
-    font-family: inherit;
-    color: inherit;
-    font-size: 3rem;
-    padding: 2rem 1.5rem;
-    width: 15rem;
-    text-align: center;
-    display: block;
-    margin-bottom: 3rem;
-  }
-  
-  .btn {
-    border: none;
-    background-color: #eee;
-    color: #222;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: 1rem 2rem;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #ccc;
-  }
-  
-  .message {
-    text-align: center;
-    margin-bottom: 8rem;
-    height: 3rem;
-  }
-  
-  .label-score {
-    margin-bottom: 2rem;
-  }
+.message {
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  top: 42%;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  padding: 2rem;
+  width: 15rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  margin-top: 7rem;
+}
+
+.right {
+  width: 52rem;
+  font-size: 1rem;
+}
+
 }
