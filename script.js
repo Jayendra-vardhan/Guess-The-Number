@@ -4,12 +4,12 @@ let secretNumber = Math.trunc(Math.random()*20)+1;
 let score = 10;
 let highscore = 0;
 
-function print(targetElement, message) {
+const displayMessage = function (targetElement, message) {
     document.querySelector(targetElement).textContent=message;
 }
 function youwin(){
-    print('.message',`🥳 Correct Number!!`);
-    print('.number',secretNumber);
+    displayMessage('.message',`🥳 Correct Number!!`);
+    displayMessage('.number',secretNumber);
     document.querySelector('body').style.backgroundColor='#60b347';
     document.querySelector('body').style.backgroundColor='#60b347';
     document.querySelector('.number').style.width = '30rem';
@@ -17,15 +17,15 @@ function youwin(){
     //New HighScore,
     if(score>highscore){
         highscore = score;
-        print('.highscore',score);
-        print('.message',`🎊Congratulations on achieving new HighScore🎊`);
+        displayMessage('.highscore',score);
+        displayMessage('.message',`🎊Congratulations on achieving new HighScore🎊`);
         
     }
 }
 function youlose(){
     if(score<1){
         document.querySelector('body').style.backgroundColor='#ff0000';
-        print('.message',`💥You lost the game!`);
+        displayMessage('.message',`💥You lost the game!`);
         document.querySelector('.score').textContent=0;
         
         return 1;
@@ -35,7 +35,7 @@ function youlose(){
     }
 }
 function youlosing(show){
-    print('.message',show);
+    displayMessage('.message',show);
     score--;
     document.querySelector('.score').textContent=youlose();
 }
@@ -44,11 +44,11 @@ document.querySelector('.check').addEventListener('click',function(){
     const guess = Number(document.querySelector('.guess').value);
     //No input
     if(!guess){
-        print('.message',`⛔Oh..No Number Try Harder⛔`);
+        displayMessage('.message',`⛔Oh..No Number Try Harder⛔`);
     }
     //if the number is not between 1 to 20
     else if(guess<1||guess>20){
-        print('.message',`What are you Doing...
+        displayMessage('.message',`What are you Doing...
         The number must be between 1 to 20 !!`);
     }
     //Players Wins
@@ -70,7 +70,7 @@ document.querySelector('.check').addEventListener('click',function(){
 });
 
 document.querySelector('.number').addEventListener('click',function(){
-    print('.message','Hey! don,t try to cheat');
+    displayMessage('.message','Hey! don,t try to cheat');
 });
 
 document.querySelector('.again').addEventListener('click',function(){
