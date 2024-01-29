@@ -13,6 +13,8 @@ function youwin(){
     document.querySelector('body').style.backgroundColor='#60b347';
     document.querySelector('body').style.backgroundColor='#60b347';
     document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.check').removeEventListener('click');
+    document.querySelector('.number').removeEventListener('click');
     
     //New HighScore,
     if(score>highscore){
@@ -27,7 +29,8 @@ function youlose(){
         document.querySelector('body').style.backgroundColor='#ff0000';
         displayMessage('.message',`💥You lost the game!`);
         document.querySelector('.score').textContent=0;
-        
+        document.querySelector('.check').removeEventListener('click');
+        document.querySelector('.number').removeEventListener('click');
         return 1;
     }
     else{
